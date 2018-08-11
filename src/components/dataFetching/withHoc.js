@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-refetch';
 import withData from './../hoc/withData.js';
 import { withBlueStyle } from './../hoc/withClass.js';
 import List from './../lists/List.js';
@@ -7,7 +6,9 @@ import List from './../lists/List.js';
 
 /**
  * Component which fetches any root directory of a user's GitHub profile
- * - Uses a "High-order Component" to connect object to query GitHub API
+ * - Using a "High-order Component" to fetch data
+ * - "Example of fetching data in a GitHub API"
+ *
  * - Another HoC is initialy used to decorate a list component with specific
  * styles before passing it down to the one that will fetch data
  */
@@ -20,7 +21,7 @@ const BlueStyleList = withBlueStyle(List);
 const BlueStyleListOfRepos = withData(props => `https://api.github.com/users/${props.username}/repos`)(BlueStyleList);
 
 
-const GitProfileNoConnect = () => {
+const GitProfile2 = () => {
 
   return (
     <BlueStyleListOfRepos
@@ -31,4 +32,4 @@ const GitProfileNoConnect = () => {
 
 };
 
-export default GitProfileNoConnect;
+export default GitProfile2;

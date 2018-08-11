@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 const Error = ({ error }) => {
 
+
+  console.log('....===', typeof error);
+
   return (
     <div style={{ background: 'red', padding: '10px', color: '#fff' }}>
       { error }
@@ -12,7 +15,7 @@ const Error = ({ error }) => {
 };
 
 Error.propTypes = {
-  error: PropTypes.string.isRequired,
+  error: PropTypes.shape({}).isRequired,
 };
 
 export default Error;

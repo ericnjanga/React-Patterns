@@ -10,15 +10,17 @@ import { withLimeStyle } from './../hoc/withClass.js';
 
 /**
  * Component which fetches any root directory of a user's GitHub profile
- * - Uses "react-refetch" connect object to query GitHub API
+ * - Using "react-refetch" connect object to fetch data
+ * - "Example of fetching data in a GitHub API"
  *
- * @repoFetch: promise object containing query results
+ * @repoFetch: PromiseState object containing query results (promise utility object from connect)
  */
 
 
-const GitProfile = (props) => {
+const GitProfile1 = (props) => {
 
   const { repoFetch } = props;
+  console.log('....', repoFetch );
 
   // Request 1 ...
   if (repoFetch.pending) {
@@ -26,6 +28,7 @@ const GitProfile = (props) => {
     return <LoadingAnimation />;
 
   } else if (repoFetch.rejected) {
+    console.log('....', repoFetch.reason);
 
     return <Error error={repoFetch.reason} />;
 
@@ -44,7 +47,7 @@ const GitProfile = (props) => {
 /**
  * Enforcing property validation
  */
-GitProfile.propTypes = {
+GitProfile1.propTypes = {
   repoFetch: PropTypes.shape().isRequired,
 };
 
@@ -53,4 +56,4 @@ export default connect(({ username, root }) => ({
 
   repoFetch: `https://api.github.com/users/${username}/${root}`,
 
-}))(GitProfile);
+}))(GitProfile1);

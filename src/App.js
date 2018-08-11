@@ -1,6 +1,6 @@
 import React from 'react';
-import GitProfile from './components/dataFetching/GitProfile.js';
-import GitProfileNoConnect from './components/dataFetching/withoutConnect.js';
+import GitProfile1 from './components/dataFetching/withReactRefetch.js';
+import GitProfile2 from './components/dataFetching/withHoc.js';
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,13 +15,13 @@ const App = () => {
 
       <h1>Data Fetching</h1>
       <h2>With <a href="https://github.com/heroku/react-refetch" target="_blank">react-refetch</a></h2>
-      <GitProfile
+      <GitProfile1
         username="ericnjanga"
         root="repos"
       />
 
       <h2>With only a High-order component</h2>
-      <GitProfileNoConnect />
+      <GitProfile2 />
 
     </div>
   );
