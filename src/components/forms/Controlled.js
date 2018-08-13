@@ -2,7 +2,16 @@ import React from 'react';
 
 
 /**
- * Component characteristics:
+ * UNCONTROLLED COMPONENT:
+ * - Used when maximal control over the form field is need
+ *
+ * Features:
+ * - uncontrolled comp features
+ * - instant field validation
+ * - conditionally disabling submit button
+ * - enforcing input format, several inputs for one piece of data
+ *
+ * Good practice:
  * - Single handler function (1 handler function for as many fields as possible)
  */
 
@@ -13,8 +22,8 @@ class Controlled extends React.Component {
 
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
+      firstName: 'Eric',
+      lastName: 'Njanga',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,10 +54,29 @@ class Controlled extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          defaultValue="Lead The Field"
-        />
+        <fieldset>
+          <label>
+            First Name:{' '}
+            <input
+              type="text"
+              name="firstName"
+              value={this.state.firstName}
+              onChange={this.handleChange}
+            />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label>
+            last Name:{' '}
+            <input
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+              onChange={this.handleChange}
+            />
+          </label>
+        </fieldset>
         <button>Submit</button>
       </form>
     );

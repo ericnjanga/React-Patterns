@@ -2,7 +2,14 @@ import React from 'react';
 
 
 /**
- * Component characteristics:
+ * UNCONTROLLED COMPONENT:
+ * - Used when minimal control over the form field is need
+ *
+ * Features:
+ * - one-time value retrieval
+ * - validating on submit
+ *
+ * Good practice:
  * - Single handler function (1 handler function for as many fields as possible)
  */
 
@@ -46,19 +53,25 @@ class Uncontrolled extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <fieldset>
-          <input
-            type="text"
-            name="firstName"
-            onChange={this.handleChange}
-          />
+          <label>
+            First Name:{' '}
+            <input
+              type="text"
+              name="firstName"
+              onChange={this.handleChange}
+            />
+          </label>
         </fieldset>
 
         <fieldset>
-          <input
-            type="text"
-            name="lastName"
-            onChange={this.handleChange}
-          />
+          <label>
+            last Name:{' '}
+            <input
+              type="text"
+              name="lastName"
+              onChange={this.handleChange}
+            />
+          </label>
         </fieldset>
         <button>Submit</button>
       </form>
