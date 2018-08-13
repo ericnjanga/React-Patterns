@@ -15,6 +15,16 @@ h2 {
 
 
 
+
+
+.pageSection {
+  background-color: #a8ccd8;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
 .App {
   text-align: center;
 }
