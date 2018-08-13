@@ -20,7 +20,7 @@ import { withLimeStyle } from './../hoc/withClass.js';
 const GitProfile1 = (props) => {
 
   const { repoFetch } = props;
-  console.log('....', repoFetch );
+  // console.log('....', repoFetch );
 
   // Request 1 ...
   if (repoFetch.pending) {
@@ -28,7 +28,7 @@ const GitProfile1 = (props) => {
     return <LoadingAnimation />;
 
   } else if (repoFetch.rejected) {
-    console.log('....', repoFetch.reason);
+    // console.log('....', repoFetch.reason);
 
     return <Error error={repoFetch.reason} />;
 

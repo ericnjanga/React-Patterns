@@ -43,3 +43,10 @@ ul.style-blue li {
 ul.style-lime li {
   background:lime;
 }
+
+
+fieldset {
+  border: 0;
+  background: #eee;
+  margin: 5px;
+}
