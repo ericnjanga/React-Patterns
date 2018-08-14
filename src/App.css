@@ -12,7 +12,27 @@ h1 {
 h2 {
   color: #ad00ff;
 }
+h3 {
+  padding: 0;
+  margin-bottom: 0;
+  color: #0077d2;
+}
+h3 + ul {
+  margin-top: 0;
+}
 
+.example,
+.warning {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  color: red;
+  font-style: italic;
+}
+.example {
+  color: #333;
+  font-style: normal;
+  list-style: initial;
+}
 
 
 
@@ -20,7 +40,10 @@ h2 {
 .pageSection {
   background-color: #a8ccd8;
   margin: 20px;
-  padding: 20px;
+  /* padding: 20px; */
+}
+.pageSection__sub {
+  background-color: #a7bfc7;
 }
 
 
