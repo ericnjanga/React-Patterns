@@ -10,6 +10,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.2",
     "react-jsonschema-form": "^1.0.4",
     "react-refetch": "^1.0.4",

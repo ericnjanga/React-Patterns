@@ -3,3 +3,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+.comp-fade-appear {
+  opacity: 0.01;
+}
+.comp-fade-appear.comp-fade-appear-active {
+  opacity: 1;
+  transition: opacity 1.4s ease-in;
+}
