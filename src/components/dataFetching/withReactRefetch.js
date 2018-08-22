@@ -5,7 +5,7 @@ import LoadingAnimation from './../utilities/LoadingAnimation.js';
 import Error from './../utilities/Error.js';
 
 import List from './../lists/List.js';
-import { withLimeStyle } from './../hoc/withClass.js';
+import { withLimeStyle } from './../../utilities/hoc/withClass.js';
 
 
 /**
