@@ -10,7 +10,7 @@ import HandlingMultipleEventsOnOneComponent from './components/events/SingleEven
 import UseOfRef1 from './components/ref/Focus.js';
 import UseOfRef2 from './components/ref/Reset.js';
 
-import AnimationWithCssTransitionGroup from './terminals/animation1.js';
+import ReactMotionAnim from './terminals/react-motion-anim.js';
 
 
 import GitProfile1 from './components/dataFetching/withReactRefetch.js';
@@ -19,6 +19,11 @@ import logo from './logo.svg';
 import './App.css';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
+ 
+
+
 const App = () => {
 
   return (
@@ -30,7 +35,38 @@ const App = () => {
 
 
       {
-        /* Animation 1*/
+        /* Animation 2 */
+      }
+      
+      <ContentDisplay
+        title="Animation 1"
+        data={[
+          {
+            name: 'text',
+            title: 'Text',
+            value: () => (
+              <div>
+                <h1>Using "react-motion" librairy</h1>
+                <ReactMotionAnim />
+              </div>
+            ),
+          },
+          {
+            name: 'git',
+            title: 'Git Repo',
+            value: () => (
+              <div>
+                <p><a href="https://github.com/chenglou/react-motion/" target="_blank">React Motion</a></p>
+              </div>
+            ),
+          },
+        ]}
+      />
+       
+
+
+      {
+        /* Animation 1 */
       }
       <ReactCSSTransitionGroup
         transitionName="comp-fade"
@@ -71,6 +107,9 @@ animation (that we wrote in the CSS) so it does not remove <b>ReactCSSTransition
           ]}
         />
       </ReactCSSTransitionGroup>
+
+
+
 
 
       <ContentDisplay
