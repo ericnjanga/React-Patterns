@@ -37,7 +37,6 @@ const App = () => {
       {
         /* Animation 2 */
       }
-      
       <ContentDisplay
         title="Animation 1"
         data={[
@@ -107,6 +106,28 @@ animation (that we wrote in the CSS) so it does not remove <b>ReactCSSTransition
           ]}
         />
       </ReactCSSTransitionGroup>
+
+
+
+
+      {
+        /* react-jsonschema-form */
+      }
+      <ContentDisplay
+        title="react-jsonschema-form"
+        data={[
+          {
+            name: 'info',
+            title: 'Info',
+            value: () => (
+              <div>
+                <p><a href="https://github.com/mozilla-services/react-jsonschema-form" target="_blank">Git Repo</a></p>
+                <p><a href="https://mozilla-services.github.io/react-jsonschema-form/" target="_blank">Playground</a></p>
+              </div>
+            ),
+          },
+        ]}
+      />
 
 
 
