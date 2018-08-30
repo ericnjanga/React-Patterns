@@ -12,6 +12,8 @@ import UseOfRef2 from './components/ref/Reset.js';
 
 import ReactMotionAnim from './terminals/react-motion-anim.js';
 
+import Circle, { RedCircle } from './terminals/Circle.js';
+
 
 import GitProfile1 from './components/dataFetching/withReactRefetch.js';
 import GitProfile2 from './components/dataFetching/withHoc.js';
@@ -32,6 +34,36 @@ const App = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">Welcome to React</h1>
       </header>
+
+
+      {
+        /* SVG 1 */
+      }
+      <ContentDisplay
+        title="SVG 1"
+        data={[
+          {
+            name: 'text',
+            title: 'Text',
+            value: () => (
+              <div>
+                <h1>Using SVG</h1>
+                <Circle x={20} y={20} radius={20} fill="yellow" />
+                <RedCircle />
+              </div>
+            ),
+          },
+          {
+            name: 'git',
+            title: 'Git Repo',
+            value: () => (
+              <div>
+                <p><a href="https://github.com/chenglou/react-motion/" target="_blank">React Motion</a></p>
+              </div>
+            ),
+          },
+        ]}
+      />
 
 
       {

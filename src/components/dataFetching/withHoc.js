@@ -1,7 +1,7 @@
 import React from 'react';
 import withData from './../../utilities/hoc/withData.js';
 import { withBlueStyle } from '../../utilities/hoc/withClass.js';
-import List from '../lists/List.js';
+import List from './../../utilities/lists/List.js';
 
 
 /**

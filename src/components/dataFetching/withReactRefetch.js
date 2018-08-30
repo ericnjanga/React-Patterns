@@ -4,7 +4,7 @@ import { connect } from 'react-refetch';
 import LoadingAnimation from './../utilities/LoadingAnimation.js';
 import Error from './../utilities/Error.js';
 
-import List from './../lists/List.js';
+import List from './../../utilities/lists/List.js';
 import { withLimeStyle } from './../../utilities/hoc/withClass.js';
 
 
